@@ -5,7 +5,7 @@ import Business from '../Business/Business';
 
 export class BusinessList  extends Component{
   render(){
-    return (<div class="BusinessList">
+    return (<div className="BusinessList">
               {this.props.businesses.map(business =>{
                 return <Business business={business}/>;
               })}

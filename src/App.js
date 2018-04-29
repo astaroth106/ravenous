@@ -18,11 +18,15 @@ let business = {  imageSrc: 'https://s3.amazonaws.com/codecademy-content/program
 let businesses = [business, business, business, business, business, business];
 
 class App extends Component {
+  searchYelp(term, location, sortBy){
+    console.log('Searching Yelp with Pizza, Brooklyn, best_match');
+  }
+  
   render() {
     return (
-      <div class="App">
+      <div className="App">
         <h1>ravenous</h1>
-        <SearchBar />
+        <SearchBar searchYelp={this.searchYelp}/>
         <BusinessList businesses={businesses}/> 
       </div>
     );
